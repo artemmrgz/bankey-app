@@ -1,1 +1,1 @@
-bankey-app
+Bankey app
