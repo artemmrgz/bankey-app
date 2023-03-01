@@ -16,7 +16,7 @@ class OnboardingContainerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
-        let page1 = ViewController1()
+        let page1 = OnboardingViewController()
         let page2 = ViewController2()
         let page3 = ViewController3()
         
