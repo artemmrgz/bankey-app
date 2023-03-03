@@ -21,7 +21,7 @@ class AccountSummaryViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        
+        setupTableHeaderView()
     }
     
     private func setupTableView() {
@@ -37,7 +37,16 @@ class AccountSummaryViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+    }
+    
+    private func setupTableHeaderView() {
+        let header = AccountSummaryHeaderView(frame: .zero)
         
+        var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        size.width = UIScreen.main.bounds.width
+        header.frame.size = size
+        
+        tableView.tableHeaderView = header
     }
 }
 
