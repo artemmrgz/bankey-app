@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dummyViewController.delegate = self
         
 //        window?.rootViewController = loginViewController
-        window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
         
         return true
     }
