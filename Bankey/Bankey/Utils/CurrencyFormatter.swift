@@ -10,11 +10,11 @@ import UIKit
 struct CurrencyFormatter {
     
     func makeAttrebutedCurrency(_ amount: Decimal) -> NSMutableAttributedString {
-        let tuple = brakeIntoDollarsAndCents(amount)
+        let tuple = breakIntoDollarsAndCents(amount)
         return makeBalanceAttributed(dollars: tuple.0, cents: tuple.1)
     }
     
-    func brakeIntoDollarsAndCents(_ amount: Decimal) -> (String, String) {
+    func breakIntoDollarsAndCents(_ amount: Decimal) -> (String, String) {
         let tuple = modf(amount.doubleValue)
         
         let dollars = convertDollar(tuple.0)
