@@ -18,6 +18,8 @@
 		D9184B8B29BB6296000C3BC3 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B8A29BB6296000C3BC3 /* AccountSummaryViewController+Networking.swift */; };
 		D9184B8F29BCC66F000C3BC3 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B8E29BCC66F000C3BC3 /* ProfileTests.swift */; };
 		D9184B9129BCCA3E000C3BC3 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9029BCCA3E000C3BC3 /* AccountTests.swift */; };
+		D9184B9329BF4D6E000C3BC3 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9229BF4D6E000C3BC3 /* SkeletonLoadable.swift */; };
+		D9184B9529BF508E000C3BC3 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9429BF508E000C3BC3 /* SkeletonCell.swift */; };
 		D9C2FDA629AB7BCE0086A002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2FDA529AB7BCE0086A002 /* AppDelegate.swift */; };
 		D9C2FDAA29AB7BCE0086A002 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2FDA929AB7BCE0086A002 /* LoginViewController.swift */; };
 		D9C2FDAF29AB7BCE0086A002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C2FDAE29AB7BCE0086A002 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		D9184B8A29BB6296000C3BC3 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		D9184B8E29BCC66F000C3BC3 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		D9184B9029BCCA3E000C3BC3 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		D9184B9229BF4D6E000C3BC3 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		D9184B9429BF508E000C3BC3 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		D9C2FDA229AB7BCE0086A002 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C2FDA529AB7BCE0086A002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C2FDA929AB7BCE0086A002 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				D9184B6829B5E66E000C3BC3 /* AccountSummaryCell.swift */,
+				D9184B9229BF4D6E000C3BC3 /* SkeletonLoadable.swift */,
+				D9184B9429BF508E000C3BC3 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C2FDBC29AB7FED0086A002 /* LoginView.swift in Sources */,
+				D9184B9529BF508E000C3BC3 /* SkeletonCell.swift in Sources */,
 				D9184B8929BB60A0000C3BC3 /* Date+Utils.swift in Sources */,
 				D9C2FDC629B104FD0086A002 /* LocalState.swift in Sources */,
 				D9C2FDCA29B21B480086A002 /* UIViewController+Utils.swift in Sources */,
@@ -361,6 +368,7 @@
 				D9C2FDCD29B2359D0086A002 /* AccountSummaryViewController.swift in Sources */,
 				D9C2FDBF29AF6C5D0086A002 /* OnboardingContainerViewController.swift in Sources */,
 				D9C2FDC829B219BA0086A002 /* MainViewController.swift in Sources */,
+				D9184B9329BF4D6E000C3BC3 /* SkeletonLoadable.swift in Sources */,
 				D9184B8B29BB6296000C3BC3 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
