@@ -63,7 +63,6 @@ extension AccountSummaryViewController {
             
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
-                    print("serverError")
                     completion(.failure(.serverError))
                     return
                 }
@@ -73,10 +72,8 @@ extension AccountSummaryViewController {
                     decoder.dateDecodingStrategy = .iso8601
                     
                     let accounts = try decoder.decode([Account].self, from: data)
-                    print("success")
                     completion(.success(accounts))
                 } catch {
-                    print("decodingError")
                     completion(.failure(.decodingError))
                 }
             }
