@@ -20,6 +20,8 @@
 		D9184B9129BCCA3E000C3BC3 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9029BCCA3E000C3BC3 /* AccountTests.swift */; };
 		D9184B9329BF4D6E000C3BC3 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9229BF4D6E000C3BC3 /* SkeletonLoadable.swift */; };
 		D9184B9529BF508E000C3BC3 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9429BF508E000C3BC3 /* SkeletonCell.swift */; };
+		D9184B9829C07987000C3BC3 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9729C07987000C3BC3 /* ProfileManager.swift */; };
+		D9184B9A29C08672000C3BC3 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9184B9929C08671000C3BC3 /* AccountSummaryViewControllerTests.swift */; };
 		D9C2FDA629AB7BCE0086A002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2FDA529AB7BCE0086A002 /* AppDelegate.swift */; };
 		D9C2FDAA29AB7BCE0086A002 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2FDA929AB7BCE0086A002 /* LoginViewController.swift */; };
 		D9C2FDAF29AB7BCE0086A002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C2FDAE29AB7BCE0086A002 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		D9184B9029BCCA3E000C3BC3 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		D9184B9229BF4D6E000C3BC3 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		D9184B9429BF508E000C3BC3 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		D9184B9729C07987000C3BC3 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		D9184B9929C08671000C3BC3 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		D9C2FDA229AB7BCE0086A002 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C2FDA529AB7BCE0086A002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C2FDA929AB7BCE0086A002 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				D9184B8D29BCC648000C3BC3 /* AccountSummary */,
 				D9184B8C29BCC637000C3BC3 /* Utils */,
+				D9184B9929C08671000C3BC3 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -148,6 +153,14 @@
 				D9184B9029BCCA3E000C3BC3 /* AccountTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		D9184B9629C0791E000C3BC3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D9184B9729C07987000C3BC3 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D9C2FD9929AB7BCE0086A002 = {
@@ -233,6 +246,7 @@
 				D9184B8A29BB6296000C3BC3 /* AccountSummaryViewController+Networking.swift */,
 				D9184B6629B5E37E000C3BC3 /* Header */,
 				D9184B6729B5E620000C3BC3 /* Cells */,
+				D9184B9629C0791E000C3BC3 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				D9184B7E29B758AC000C3BC3 /* CurrencyFormatterTests.swift in Sources */,
 				D9184B9129BCCA3E000C3BC3 /* AccountTests.swift in Sources */,
 				D9184B8F29BCC66F000C3BC3 /* ProfileTests.swift in Sources */,
+				D9184B9A29C08672000C3BC3 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				D9C2FDBC29AB7FED0086A002 /* LoginView.swift in Sources */,
 				D9184B9529BF508E000C3BC3 /* SkeletonCell.swift in Sources */,
 				D9184B8929BB60A0000C3BC3 /* Date+Utils.swift in Sources */,
+				D9184B9829C07987000C3BC3 /* ProfileManager.swift in Sources */,
 				D9C2FDC629B104FD0086A002 /* LocalState.swift in Sources */,
 				D9C2FDCA29B21B480086A002 /* UIViewController+Utils.swift in Sources */,
 				D9C2FDCF29B23FA10086A002 /* AccountSummaryHeaderView.swift in Sources */,

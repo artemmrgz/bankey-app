@@ -22,6 +22,9 @@ class AccountSummaryViewController: UIViewController {
     let headerView = AccountSummaryHeaderView(frame: .zero)
     let refreshControl = UIRefreshControl()
     
+    // Networking
+    let profileManager: ProfileManageable = ProfileManager()
+    
     var isLoaded = false
     
     lazy var logoutBarButtonItem: UIBarButtonItem = {
@@ -125,7 +128,7 @@ extension AccountSummaryViewController {
         let group = DispatchGroup()
         
         group.enter()
-        fetchProfile(forUserId: "1") { result in
+        profileManager.fetchProfile(forUserId: "1") { result in
             switch result {
             case .success(let profile):
                 self.profile = profile
@@ -172,17 +175,22 @@ extension AccountSummaryViewController {
     }
     
     private func displayError(_ error: NetworkError) {
+        let (title, message) = titleAndMessage(for: error)
+        showErrorAlert(title: title, message: message)
+    }
+    
+    private func titleAndMessage(for error: NetworkError) -> (String, String) {
         let title: String
         let message: String
         switch error {
         case .serverError:
-            title = "Network Error"
+            title = "Server Error"
             message = "Ensure you are connected to the internet. Please try again."
         case .decodingError:
-            title = "Decoding Error"
+            title = "Network Error"
             message = "We could not process your request. Please try again."
         }
-        self.showErrorAlert(title: title, message: message)
+        return (title, message)
     }
     
     private func showErrorAlert(title: String, message: String) {
@@ -212,5 +220,12 @@ extension AccountSummaryViewController {
         profile = nil
         accounts = []
         isLoaded = false
+    }
+}
+
+// MARK: Unit testing
+extension AccountSummaryViewController {
+    func titleAndMessageForTesting(for error: NetworkError) -> (String, String) {
+        return titleAndMessage(for: error)
     }
 }
