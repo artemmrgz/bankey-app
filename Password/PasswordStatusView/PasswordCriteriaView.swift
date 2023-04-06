@@ -32,10 +32,10 @@ class PasswordCriteriaView: UIView {
         imageView.image = circleImage
     }
     
-    init(criterion: String) {
+    init(text: String) {
         super.init(frame: .zero)
         
-        label.text = criterion
+        label.text = text
         
         style()
         layout()

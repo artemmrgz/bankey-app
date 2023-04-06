@@ -11,12 +11,9 @@ class ViewController: UIViewController {
     
     let stackView = UIStackView()
     let newPasswordTextField = PasswordTextField(placeholderText: "New password")
-    let passwordStatusView = UIView()
-    
-    let criteriaView = PasswordCriteriaView(criterion: "uppercase letter (A-Z)")
-    
-    let repeatPasswordTextField = PasswordTextField(placeholderText: "Re-enter new password")
-    let resetButton = UIButton()
+    let statusView = PasswordStatusView()
+    let confirmPasswordTextField = PasswordTextField(placeholderText: "Re-enter new password")
+    let resetButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +30,24 @@ extension ViewController {
         stackView.axis = .vertical
         stackView.spacing = 20
         
-        passwordStatusView.backgroundColor = .secondarySystemBackground
+        newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
         
+        statusView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.layer.cornerRadius = 5
+        statusView.clipsToBounds = true
+        
+        confirmPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
         resetButton.setTitle("Reset password", for: .normal)
         resetButton.configuration = .filled()
-        
-        criteriaView.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
     }
     
     func layout() {
         stackView.addArrangedSubview(newPasswordTextField)
-        stackView.addArrangedSubview(passwordStatusView)
-        stackView.addArrangedSubview(criteriaView)
-        stackView.addArrangedSubview(repeatPasswordTextField)
+        stackView.addArrangedSubview(statusView)
+        stackView.addArrangedSubview(confirmPasswordTextField)
         stackView.addArrangedSubview(resetButton)
         
         view.addSubview(stackView)
@@ -55,5 +57,12 @@ extension ViewController {
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 2)
         ])
+    }
+}
+
+// MARK: Actions
+extension ViewController {
+    @objc func resetPasswordButtonTapped(sender: UIButton) {
+        
     }
 }
