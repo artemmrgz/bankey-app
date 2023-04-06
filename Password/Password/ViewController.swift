@@ -9,7 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let stackView = UIStackView()
     let newPasswordTextField = PasswordTextField(placeholderText: "New password")
+    let passwordStatusView = UIView()
+    let repeatPasswordTextField = PasswordTextField(placeholderText: "Re-enter new password")
+    let resetButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +26,28 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func style() {
-        newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        
+        passwordStatusView.backgroundColor = .secondarySystemBackground
+        
+        resetButton.setTitle("Reset password", for: .normal)
+        resetButton.configuration = .filled()
     }
     
     func layout() {
-        view.addSubview(newPasswordTextField)
+        stackView.addArrangedSubview(newPasswordTextField)
+        stackView.addArrangedSubview(passwordStatusView)
+        stackView.addArrangedSubview(repeatPasswordTextField)
+        stackView.addArrangedSubview(resetButton)
+        
+        view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            newPasswordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            newPasswordTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 2)
         ])
     }
 }
