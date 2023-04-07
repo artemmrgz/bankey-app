@@ -87,3 +87,18 @@ extension PasswordCriteriaView {
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
     }
 }
+
+// MARK: Tests
+extension PasswordCriteriaView {
+    var isCheckmarkImage: Bool {
+        return imageView.image == checkmarkImage
+    }
+    
+    var isResetImage: Bool {
+        return imageView.image == circleImage
+    }
+    
+    var isXmarkImage: Bool {
+        return imageView.image == xmarkImage
+    }
+}
